@@ -103,7 +103,7 @@ function Bookings() {
          
         {Data.map(ele => <p>{ele.month}</p>)}
         
-        <button onClick={() => setPage(page + 1)} disabled={page=== calData.length}><RiArrowRightSLine className='arrIcon'/></button>
+        <button onClick={() => setPage(page + 1)} disabled={page=== 12} ><RiArrowRightSLine className='arrIcon'/></button>
         </div>
         <div className='calender'>
         

@@ -23,17 +23,52 @@ ChartJS.register(
 )
 
 function Revenue() {
-    const data ={
-        labels: ['Jan', 'Fed', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+
+  const [rev, setRev] = React.useState(1)
+
+    const data =[
+      {
+        id:1,
+        labels: ['','Apr','May','Jun',''],
         datasets: [
             {
-                label: '369',
-                data:[3, 6, 9, 5, 2, 7, 4],
+                label:'95.4k',
+                data:[,7,9,5,],
                 backgroundColor:'#FFB628',
-                borderRadius:5,
+                borderRadius:13,
+                hoverBackgroundColor: 'rgba(50, 50, 93, 0.25)', // Set the hover background color with box shadow
             } 
         ]
-    }
+    },
+      {
+        id:2,
+        labels: [ 'Jan', 'Fed', 'Mar', 'Apr', 'May','Jun'],
+        datasets: [
+            {
+                label: '95.4k',
+                data:[3,6,5,7,9,6],
+                backgroundColor:'#FFB628',
+                borderRadius:10,
+            } 
+        ]
+    },
+      {
+        id:3,
+        labels: [  'Jul', 'Aug', "Sep", "Oct", "Nov", "Dec",'Jan', 'Fed', 'Mar', 'Apr', 'May','Jun'],
+        datasets: [
+            {
+                label: '95.4k',
+                data:[6,5,3,6,5,7,3,6,5,7,9,6],
+                backgroundColor:'#FFB628',
+                borderRadius:6,
+            } 
+        ]
+    },
+  ]
+
+  const Data = data.filter((item) => item.id === rev) 
+
+
 
     const options =
     {
@@ -43,6 +78,9 @@ function Revenue() {
             },
             x:{
                 display:true,
+                grid: {
+                  display: false,
+                },
             }
           },
           plugins: {
@@ -53,12 +91,17 @@ function Revenue() {
           },
           layout: {
             padding: {
-              top: 20,
+              
               left: 10,
               right: 10,
-              bottom: 0,
+             
             },
           },
+          // Disable interaction for masking bottom corners
+          interaction: {
+            mode: 'index',
+            intersect:false,
+          }
     }
 
   return (
@@ -69,18 +112,32 @@ function Revenue() {
     </div>
         
         <div className='chart'>
-            <Bar
-                data={data}
-                options = {options}
-            />
+       { Data.map((ele) => (
+        <div>
+        <Bar data={ele} options={options} />
+
+        <style>
+        {`
+        .chart-container .react-chartjs-2-bar {
+          border-radius: 6px;
+          border-top: 0;
+          border-bottom: 0;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        `}
+        </style>
+
+        </div>
+          ))
+        }
         </div>
 
         <p style={{color:"rgba(0, 0, 0, 0.777)",fontWeight:"600", marginTop:"5px"}}>Net Revenue</p>
 
         <div className='years'>
-          <button>3m</button>
-          <button>6m</button>
-          <button>1 yr</button>
+          <button onClick={() => setRev(1)}>3m</button>
+          <button onClick={() => setRev(2)}>6m</button>
+          <button onClick={() => setRev(3)}>1 yr</button>
           <button>2 yrs</button>
           <button>Max</button>
         </div>

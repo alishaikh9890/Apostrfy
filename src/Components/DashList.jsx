@@ -9,8 +9,6 @@ function DashList() {
         <p>30506</p>
         <p>30507</p>
         <p>30508</p>
-      
-     
     </div>
   )
 }

@@ -7,6 +7,7 @@
     margin: auto;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    padding-bottom: 20px;
 }
 .list{
     display: flex;
@@ -14,7 +15,14 @@
     gap:10px;
    padding-left: 24px;
    overflow-x: scroll;
+
 }
+
+.list::-webkit-scrollbar {
+    height:0; /* Hide the horizontal scrollbar */
+    width: 0;
+     /* Hide the vertical scrollbar */
+  }
 .list > p{
     font-size: 15px;
     font-weight: 600;
@@ -41,6 +49,19 @@
     margin:0;
     
 }
+
+.chart{
+    margin-top: 10px;
+
+    
+}
+
+
+
+
+
+
+
 
 .years button{
     width: 50px;
