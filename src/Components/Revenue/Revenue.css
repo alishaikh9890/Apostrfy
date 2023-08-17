@@ -1,0 +1,82 @@
+
+
+.Revenue{
+   
+    border-radius: 20px;
+    width: 327px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.list{
+    display: flex;
+    flex-flow: row;
+    gap:10px;
+   padding-left: 24px;
+   overflow-x: scroll;
+}
+.list > p{
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    
+}
+
+.stats-head{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px
+;
+}
+.stats-head h4{
+    margin:0;
+    
+}
+
+.years button{
+    width: 50px;
+    background-color: #FEF5EA;
+    border: none;
+    border-radius: 10px;
+    padding: 1vh 0vh;
+    font-size: 2vh;
+    font-weight: 900;
+    margin: 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.years button:hover{
+    background-color: white;
+    color:orangered
+}
+
+
+.stats-circle{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats-circle > div{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.Number h2{
+    color: orange;
+    margin-bottom: 35px;
+}
+.stats-circle > div > p{
+    margin-top: -20px;
+    font-weight: 600;
+}

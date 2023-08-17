@@ -1,0 +1,47 @@
+.contact{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin: 24px;
+    padding: 1.7vh 3vh;
+    background-color:rgb(255, 255, 255);
+    border-radius: 1.6vh;
+    text-align: start;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.contact > div{
+    /* border: 1px solid red; */
+    width: 40%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.contact h3{
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+.icon1{
+    color:white;
+     background-color:#2096F3;
+     padding: .3vh;
+     border-radius: 50%;
+     font-size:2.2vh
+}
+.icon2{
+    color:white;
+     background-color:#0AE6FE;
+     padding: 0.4vh;
+    
+     border-radius: 50%;
+
+}
+.icon3{
+    color:white;
+     background-color:#65B161;
+     border-radius: 50%;
+    font-size: 3vh;
+
+}
